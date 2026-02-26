@@ -1,0 +1,309 @@
+/* Estilos específicos para el historial de lecturas */
+
+/* SOBRESCRIBIR el fondo del body base SOLO para historial */
+body.historial-page {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%), 
+                url('https://itsoriente.edu.ec/web/image/42587-36172172/tecnologico%20San%20Antonio.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Contenedor principal con blur */
+body.historial-page .container {
+    backdrop-filter: blur(2px);
+}
+
+/* SOBRESCRIBIR completamente la card del base.css para historial */
+body.historial-page .card {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+    padding: 2rem !important;
+    margin-bottom: 2rem !important;
+    position: relative !important;
+}
+
+/* SOBRESCRIBIR el ::before de la card */
+body.historial-page .card::before {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.6), rgba(79, 70, 229, 0.6)) !important;
+}
+
+body.historial-page .card-header {
+    background: transparent !important;
+    border-bottom: 2px solid rgba(99, 102, 241, 0.2) !important;
+    padding: 0 0 1rem 0 !important;
+    margin-bottom: 1.5rem !important;
+    border-radius: 0 !important;
+}
+
+body.historial-page .card-header h2 {
+    color: #374151 !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+body.historial-page .card-body {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Formularios semi-transparentes */
+body.historial-page form,
+body.historial-page .filter-form {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    flex-wrap: wrap !important;
+}
+
+body.historial-page form label {
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin: 0 !important;
+}
+
+body.historial-page form input,
+body.historial-page form select {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(226, 232, 240, 0.5) !important;
+    border-radius: 6px !important;
+    padding: 0.5rem !important;
+    min-width: 120px !important;
+}
+
+body.historial-page form input:focus,
+body.historial-page form select:focus {
+    outline: none !important;
+    border-color: rgba(99, 102, 241, 0.8) !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* TABLA COMPLETAMENTE TRANSPARENTE - MÁXIMA ESPECIFICIDAD */
+body.historial-page table,
+body.historial-page .table,
+body.historial-page table.table {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+}
+
+/* Encabezados de tabla */
+body.historial-page table thead {
+    background: rgba(241, 245, 249, 0.6) !important;
+}
+
+body.historial-page table th,
+body.historial-page table thead th {
+    background: rgba(241, 245, 249, 0.6) !important;
+    color: #374151 !important;
+    font-weight: 600 !important;
+    padding: 1rem !important;
+    text-align: left !important;
+    border-bottom: 2px solid rgba(99, 102, 241, 0.3) !important;
+    font-size: 0.875rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.025em !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+}
+
+/* Cuerpo de tabla */
+body.historial-page table tbody {
+    background: transparent !important;
+}
+
+/* Celdas de tabla */
+body.historial-page table td,
+body.historial-page table tbody td {
+    padding: 1rem !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.3) !important;
+    background: transparent !important;
+    font-size: 0.875rem !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-top: none !important;
+    color: #374151 !important;
+}
+
+/* Filas hover */
+body.historial-page table tbody tr:hover {
+    background: rgba(248, 250, 252, 0.4) !important;
+}
+
+/* Filas alternas */
+body.historial-page table tbody tr:nth-child(even) {
+    background: rgba(248, 250, 252, 0.15) !important;
+}
+
+/* Botones semi-transparentes - SOBRESCRIBIR base.css */
+body.historial-page .btn,
+body.historial-page button {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    transition: all 0.2s ease !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+body.historial-page .btn[type="submit"],
+body.historial-page button[type="submit"],
+body.historial-page .btn-primary {
+    background: rgba(99, 102, 241, 0.9) !important;
+    color: white !important;
+    border-color: rgba(99, 102, 241, 0.5) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.historial-page .btn[type="submit"]:hover,
+body.historial-page button[type="submit"]:hover,
+body.historial-page .btn-primary:hover {
+    background: rgba(99, 102, 241, 1) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 12px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Alertas semi-transparentes - SOBRESCRIBIR base.css */
+body.historial-page .alert {
+    background: rgba(212, 237, 218, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    border-left: 4px solid var(--secondary) !important;
+    padding: 1rem 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+body.historial-page .alert.success {
+    background: rgba(212, 237, 218, 0.9) !important;
+    color: #065f46 !important;
+    border-left-color: #10b981 !important;
+}
+
+/* Paginación semi-transparente */
+body.historial-page .pagination {
+    display: flex !important;
+    gap: 0.5rem !important;
+    margin-top: 1rem !important;
+    justify-content: center !important;
+}
+
+body.historial-page .pagination a {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(226, 232, 240, 0.5) !important;
+    border-radius: 6px !important;
+    padding: 0.5rem 1rem !important;
+    text-decoration: none !important;
+    color: #374151 !important;
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important;
+}
+
+body.historial-page .pagination a:hover {
+    background: rgba(248, 250, 252, 0.9) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Página activa en paginación */
+body.historial-page .pagination a[style*="background:#007bff"],
+body.historial-page .pagination a[style*="background: #007bff"] {
+    background: rgba(99, 102, 241, 0.9) !important;
+    color: white !important;
+    border-color: rgba(99, 102, 241, 0.5) !important;
+}
+
+/* Links de navegación - SOBRESCRIBIR base.css */
+body.historial-page .lectura-back-link,
+body.historial-page a[href*="index.php"]:not(.navbar-brand):not(.nav-link) {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(226, 232, 240, 0.5) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1.5rem !important;
+    text-decoration: none !important;
+    color: #374151 !important;
+    transition: all 0.2s ease !important;
+    display: inline-block !important;
+    font-weight: 500 !important;
+}
+
+body.historial-page .lectura-back-link:hover,
+body.historial-page a[href*="index.php"]:not(.navbar-brand):not(.nav-link):hover {
+    background: rgba(248, 250, 252, 0.9) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Estados de tóner con colores mejorados */
+body.historial-page table td small {
+    font-weight: 600 !important;
+    font-size: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Contador total con formato */
+body.historial-page table td:nth-child(3) {
+    font-weight: 600 !important;
+    color: #4f46e5 !important;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    /* En móviles, tabla más visible */
+    body.historial-page table,
+    body.historial-page .table {
+        background: rgba(255, 255, 255, 0.95) !important;
+        font-size: 0.75rem !important;
+    }
+    
+    body.historial-page .card {
+        margin: 0.5rem !important;
+        padding: 1rem !important;
+        border-radius: 8px !important;
+    }
+    
+    body.historial-page table th,
+    body.historial-page table td {
+        padding: 0.5rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    body.historial-page form {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    
+    body.historial-page .pagination {
+        flex-wrap: wrap !important;
+    }
+}

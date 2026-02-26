@@ -1,0 +1,30 @@
+<!-- app/views/printers/add.php -->
+<div class="card">
+  <div class="card-header"><h2 class="mb-0">Agregar Nueva Impresora</h2></div>
+  <div class="card-body form-card">
+    <?php if (!empty($error_message)): ?>
+      <div class="alert alert-danger"><?= htmlspecialchars($error_message) ?></div>
+    <?php endif; ?>
+    <form action="index.php?controller=printer&action=add" method="post" novalidate>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" class="form-control" required title="Nombre">
+      </div>
+      <div class="form-group">
+        <label for="ip">Dirección IP</label>
+        <input type="text" name="ip" id="ip" class="form-control" required placeholder="Ejemplo: 192.168.100.12" pattern="^(\d{1,3}\.){3}\d{1,3}$" title="Debe ser una dirección IPv4 válida, p.ej. 192.168.0.1">
+      </div>
+      <button type="submit" class="btn btn-success mt-2">Guardar</button>
+      <a href="index.php?controller=printer&action=index" class="btn btn-secondary mt-2">Cancelar</a>
+    </form>
+  </div>
+</div>
+
+<script>
+// Captura sólo dígitos y punto en el campo IP
+document.getElementById('ip').addEventListener('keydown', function(e) {
+  const nav = ['Backspace','ArrowLeft','ArrowRight','Delete','Tab'];
+  if (nav.includes(e.key) || e.key === '.' || /[0-9]/.test(e.key)) return;
+  e.preventDefault();
+});
+</script>
